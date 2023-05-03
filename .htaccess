@@ -1,0 +1,5 @@
+AddHandler application/x-httpd-php5 .htm
+ErrorDocument 404 /404.shtml
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
