@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: cursive;
+    font-size: 100%;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+        url(../media/office-wallpaper.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+body {
+    padding: 0 2em;
+    min-width: 400px;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    grid-template-columns: 1fr 2fr;
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.responsive-nav .nav-items {
+    background-color:red;
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.responsive-nav .nav-items a {
+    text-decoration: none;
+    color: white;
+}
+
+.responsive-nav button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 2em;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.desktop-nav ul {
+    background-color: salmon;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.desktop-nav ul li {
+    padding: 0.5em;
+}
+
+.desktop-nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.desktop-nav ul a:hover {
+    text-decoration: none;
+    color: salmon;
+    background-color: white;
+}
+
+header h1 {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 5em;
+    margin-bottom: 0;
+}
+
+header p {
+    font-family: audrielle-no1, cursive;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+aside {
+    text-align: left;
+}
+
+main.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+main.photos article {
+    min-width: 360px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+main.photos article:hover {
+    transform: scale(1.1);
+}
+
+main.photos article ul {
+    list-style: none;
+    margin: 0 1em 1em 1em;
+    padding: 0 1em 1em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+main.photos article li {
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+figure.polaroid {
+    margin-bottom: 0;
+}
+
+figure.polaroid img {
+    width: 100%;
+}
+
+figure.polaroid figcaption {
+    padding: 10px;
+}
+
+/* Navigation when width is 768px or more */
+@media screen and (min-width: 768px) {
+    /* hide the hamburger menu */
+    .responsive-nav .hamburger {
+        display: none;
+    }
+
+    /* show the desktop navigation */
+    .desktop-nav {
+        display: block;
+    }
+}
+
+/* Breakpoint - when width is less than 1600px */
+@media screen and (max-width: 1600px) {
+    main.photos {
+        grid-template-columns: 1fr 1fr; /* change to two columns */
+    }
+
+    aside {
+        display: none;
+    }
+
+    body {
+        display: block;
+    }
+}
+
+/* Breakpoint - when width is less than 950px */
+@media screen and (max-width: 950px) {
+    main.photos {
+        grid-template-columns: 1fr; /* change to one column */
+    }
+}

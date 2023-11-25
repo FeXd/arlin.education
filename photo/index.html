@@ -6,57 +6,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arlin's Photo a Day</title>
 
-    <style>
-        body {
-            text-align: center;
-            min-width: 400px;
-        }
+    <!-- External Stylesheet -->
+    <link href="styles/main.css" rel="stylesheet" />
 
-        figure.polaroid {
-            width: 360px;
-            background-color: white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            display: inline-block;
-        }
+    <!-- Google Fonts -- Sedgwick Ave Display -- https://fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 
-        figure.polaroid img {
-            width: 100%;
-        }
-
-        figure.polaroid figcaption {
-            padding: 10px;
-        }
-    </style>
+    <!-- Adobe Fonts -- audrielle-no1 -- audrielle-no2 -- https://fonts.adobe.com -->
+    <link rel="stylesheet" href="https://use.typekit.net/npk5ikt.css">
 </head>
 
 <body>
+    <nav class="responsive-nav">
+        <button class="hamburger" onclick="toggleMenu()">☰ Menu</button>
+        <ul class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <!-- More items -->
+        </ul>
+    </nav>
+
+    <script>
+        // Internal JavaScript
+        function toggleMenu() {
+            var navItems = document.querySelector('.responsive-nav .nav-items');
+            navItems.style.display = navItems.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 
     <header>
         <h1>Arlin's Photo a Day</h1>
-        <p>Interactive Design &amp; Technology Assignment 1</p>
+        <p>
+            Interactive Design &amp; Technology<br>
+            PHOT 100 - Photography<br>
+            Assignment 1
+        </p>
     </header>
 
-    <main>
-        <figure class="polaroid">
-            <p>Day 1: Out of focus</p>
-            <img src="media/arlin-photo-a-day-001.jpeg" alt="Out of focus photograph of a bush.">
-            <figcaption class="caption">
-                <p>Take a picture that is intentionally out of focus.</p>
-                <p>Apple iPhone 14 Pro Max</p>
-                <p>Ultra Wide Camera</p>
-                <p>ISO 400</p>
-                <p>78 mm</p>
-                <p>f2.2</p>
-                <p>1/40s</p>
-            </figcaption>
-        </figure>
+    <nav class="desktop-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <!-- More items -->
+        </ul>
+    </nav>
+
+    <aside>
+        <ul>
+            <li>Day 1: Out of focus- Take a picture that is intentionally out of focus.</li>
+            <li>Day 2: Self-Portrait - Practice framing and rule of thirds.</li>
+            <li>Day 3: Shadows - Capture interesting shadow patterns.</li>
+            <li>Day 4: Lines and Shapes - Focus on geometry and framing.</li>
+            <li>Day 5: Reflections - Incorporate reflections in your composition.</li>
+            <li>Day 6: Low Light - Experiment with night photography.</li>
+            <li>Day 7: Silhouettes - Create striking silhouettes.</li>
+            <li>Day 8: Candid Portraits - Capture people unaware.</li>
+            <li>Day 9: Street Photography - Document daily life.</li>
+            <li>Day 10: Action Shots - Freeze motion in your frame.</li>
+            <li>Day 11: Emotions - Portray a specific feeling.</li>
+            <li>Day 12: Minimalism - Create powerful images with simplicity.</li>
+            <li>Day 13: Tell a Story - Compose a photo that tells a narrative.</li>
+            <li>Day 14: Symmetry - Find and emphasize symmetry in your subject.</li>
+            <li>Day 15: Texture - Highlight interesting textures in your photo.</li>
+        </ul>
+    </aside>
+
+    <main class="photos">
+        <article>
+            <h2>Day 5: Reflections</h2>
+            <figure class="polaroid">
+                <img src="media/arlin-photo-a-day-005.jpeg" alt="SaskPolytech building reflecting in dirty puddle.">
+                <figcaption class="caption">
+                    <p>Incorporate reflections in your composition.</p>
+                </figcaption>
+            </figure>
+            <ul>
+                <li>Fujifilm X-T10</li>
+                <li>Fujinon XF 18mm f/2</li>
+                <li>ISO 400</li>
+                <li>18 mm</li>
+                <li>f11</li>
+                <li>1/180s</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Day 4: Lines and Shapes</h2>
+            <figure class="polaroid">
+                <img src="media/arlin-photo-a-day-004.jpeg" alt="Chain link fence with shadow against wall.">
+                <figcaption class="caption">
+                    <p>Focus on geometry and framing.</p>
+                </figcaption>
+            </figure>
+            <ul>
+                <li>Fujifilm X-T10</li>
+                <li>Fujinon XF 18mm f/2</li>
+                <li>ISO 400</li>
+                <li>18 mm</li>
+                <li>f11</li>
+                <li>1/180s</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Day 3: Shadows</h2>
+            <figure class="polaroid">
+                <img src="media/arlin-photo-a-day-003.jpeg" alt="Chain link fence shadow cast across a brick wall.">
+                <figcaption class="caption">
+                    <p>Capture interesting shadow patterns.</p>
+                </figcaption>
+            </figure>
+            <ul>
+                <li>Fujifilm X-T10</li>
+                <li>Fujinon XF 18mm f/2</li>
+                <li>ISO 200</li>
+                <li>18 mm</li>
+                <li>f16</li>
+                <li>1/160s</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Day 2: Self-Portrait</h2>
+            <figure class="polaroid">
+                <img src="media/arlin-photo-a-day-002.jpeg" alt="Chain link fence against painted plywood.">
+                <figcaption class="caption">
+                    <p>Practice framing and rule of thirds.</p>
+                </figcaption>
+            </figure>
+            <ul>
+                <li>Apple iPhone 14 Pro Max</li>
+                <li>Main Camera</li>
+                <li>ISO 400</li>
+                <li>24 mm</li>
+                <li>f1.7.8</li>
+                <li>1/59s</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Day 1: Out of focus</h2>
+            <figure class="polaroid">
+                <img src="media/arlin-photo-a-day-001.jpeg" alt="Out of focus photograph of a bush.">
+                <figcaption class="caption">
+                    <p>Take a picture that is intentionally out of focus.</p>
+                </figcaption>
+            </figure>
+            <ul>
+                <li>Apple iPhone 14 Pro Max</li>
+                <li>Ultra Wide Camera</li>
+                <li>ISO 400</li>
+                <li>78 mm</li>
+                <li>f2.2</li>
+                <li>1/40s</li>
+            </ul>
+        </article>
     </main>
 
     <footer>
-        <p>&copy; 2023 Arlin Schaffel.</p>
+        <p>Copyright &copy; 2023 Arlin Schaffel</p>
     </footer>
-
 </body>
 
 </html>
