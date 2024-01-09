@@ -4,137 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Linktree Lecture Examples</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body,
-        main {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        header img {
-            border-radius: 50%;
-            width: 100px;
-        }
-
-        main.buttons {
-            max-width: 620px;
-        }
-
-        main.buttons div {
-            margin: 1em;
-            background-color: white;
-            border: 2px solid;
-            border-radius: 8px;
-            padding: 1em;
-            box-shadow: 8px 8px 6px 1px rgba(0, 0, 255, .2);
-            min-width: 320px;
-        }
-
-        main.buttons div:hover {
-            background-color: black;
-            color: white;
-            box-shadow: 7px 7px 6px 1px rgba(0, 255, 255, 0.2);
-            cursor: pointer;
-            transform: scale(1.1);
-        }
-
-        main.buttons div:active {
-            background-color: white;
-            color: black;
-            transform: scale(0.9);
-        }
-
-        main.buttons div img {
-            width: 40px;
-            height: 40px;
-        }
-
-        main.buttons div {
-            text-align: center;
-        }
-
-        /* shake animation */
-        .button-shake {
-            animation: 3s linear 0s infinite normal none running shake;
-        }
-
-        @keyframes shake {
-            0% {
-                transform: translateX(3px) rotate(1deg);
-            }
-
-            2.5% {
-                transform: translateX(-3px) rotate(-1deg);
-            }
-
-            5% {
-                transform: translateX(3px) rotate(1deg);
-            }
-
-            7.5% {
-                transform: translateX(-3px) rotate(-1deg);
-            }
-
-            10% {
-                transform: translateX(2px) rotate(1deg);
-            }
-
-            12.5% {
-                transform: translateX(-2px) rotate(-1deg);
-            }
-
-            15% {
-                transform: translateX(2px) rotate(1deg);
-            }
-
-            17.5% {
-                transform: translateX(-2px) rotate(-1deg);
-            }
-
-            20% {
-                transform: translateX(1px) rotate(1deg);
-            }
-
-            22.5% {
-                transform: translateX(-1px) rotate(-1deg);
-            }
-
-            25% {
-                transform: translateX(0px) rotate(0deg);
-            }
-        }
-    </style>
+    <title>arlin.education links</title>
+    <link href="styles/main.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <img src="media/arlin.jpg" alt="Photo of Arlin Schaffel">
         <h1>Arlin Schaffel</h1>
-        <p>Instructor</p>
+        <p>
+            <strong>Instructor</strong><br>
+            Saskatchewan Polytechnic<br>
+            Interactive Design &amp; Technology
+        </p>
     </header>
 
     <main class="buttons">
-        <a href="photo/">
+        <a href="https://saskpolytech.ca/programs-and-courses/programs/Interactive-Design-and-Technology.aspx"
+            target="_blank" rel="noopener">
+            <div>
+                <p>IDT Homepage</p>
+            </div>
+        </a>
+
+        <a href="https://github.com/Interactive-Design-and-Technology" target="_blank" rel="noopener">
+            <div>
+                <p>IDT GitHub</p>
+            </div>
+        </a>
+
+        <a href="https://arlin.education/jobs" target="_blank" rel="noopener">
             <div class="button-shake">
+                <p>IDT Jobs</p>
+            </div>
+        </a>
+
+        <a href="https://arlin.org" target="_blank" rel="noopener">
+            <div>
+                <p>Tech Weblog</p>
+            </div>
+        </a>
+
+        <a href="photo/" target="_blank" rel="noopener">
+            <div>
                 <p>Photo a Day</p>
             </div>
         </a>
     </main>
 
     <footer>
-        <p>&copy; 2023 Arlin Schaffel. All rights reserved.</p>
+        <p>&copy; 2024 Arlin Schaffel. All rights reserved.</p>
     </footer>
 </body>
 

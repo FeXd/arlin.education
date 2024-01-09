@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>arlin.education 404: File Not Found</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arlin.education 404: File Not Found</title>
 </head>
 
 <body>
     <h1 style="color:salmon;">Sorry bruh, file not found</h1>
     <p>Keep looking, you might find it if you try harder.</p>
 </body>
+
 </html>
