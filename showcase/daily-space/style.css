@@ -1,0 +1,131 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+* {
+    box-sizing: border-box;
+    margin:0
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    height: 100vh;
+    /* Fall-back image */
+    background-image: url("https://apod.nasa.gov/apod/image/1510/JupiterHST1522a.jpg");
+    /* Covers the whole background regardless of screen size */
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.daily-dose {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 4em 10% 2em;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    flex:1;
+    font-size: 2rem;
+}
+
+#space-day-title a{
+    text-decoration: none;
+    color:white;
+}
+
+#space-day-title a:hover,
+#space-day-title a:focus{
+    text-decoration: underline;
+}
+
+h3{
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+h4{
+    margin-bottom: 5rem;
+    font-size: 1.1rem;
+}
+
+/* Photo description and fact of the day styling */
+
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+#img-credits{
+    margin-bottom: 1.2rem;
+}
+
+aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-left {
+    margin-left: 2%;
+}
+
+.button-right {
+    margin-right: 2%;
+}
+
+/* Styling to both right and left arrow buttons */
+
+button {
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.607);
+    font-size: 5em;
+    transition:ease-in 900ms;
+    cursor:pointer ;
+}
+
+button:hover,
+button:focus {
+    color:white;
+    text-shadow: 0px 0px 8px white;
+    transition:ease-out 300ms;
+}
+
+/* Adding box shadow and opacity to the text background */
+.fact-of-the-day,.img-details {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.36); 
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.36);
+    padding: 1rem 2rem;
+}
+
+.fact-of-the-day {
+    max-width: 25em;
+    margin: 1em 0;
+    align-self: flex-end;
+}
+
+.extra-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

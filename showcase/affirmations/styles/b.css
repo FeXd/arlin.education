@@ -1,0 +1,335 @@
+/* Stylesheet for B theme */
+html {
+    min-width: 250px;
+    background-attachment: inherit;
+    background-image: url(../assets/b-background.svg);
+}
+
+body {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item img {
+    width: 100vw;
+    height: 100vh;
+    position: static
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.column-popUp {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    border-radius: 0.75rem;
+}
+
+/* Card styling */
+.popup-card {
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 9px 18px;
+    text-align: center;
+    text-transform: none;
+    opacity: 90%;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+}
+
+.popup-info {
+    padding: 40px 40px 30px 40px;
+}
+
+
+/* Text/font styling */
+h1 {
+    font-family: quirkwood-regular, sans-serif;
+    font-size: 7rem;
+    letter-spacing: 3px;
+    margin: 10px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 650;
+    text-decoration: underline;
+    font-family: 'hobeaux', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+p {
+    font-size: 20px;
+    font-weight: 350;
+    font-family: 'hobeaux', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3,
+p {
+    text-align: center;
+}
+
+
+/* Button styling */
+.popup-btns button {
+    font-family: 'hobeaux', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid rgb(197, 199, 201);
+    border-left: 1px solid rgb(197, 199, 201);
+    padding: 20px 16px;
+    cursor: pointer;
+    float: left;
+    width: 100%;
+}
+
+.popup-btns button:not(:last-child) {
+    border-left: none;
+}
+
+.popup-btns button:hover {
+    background-color: #FE7C21;
+}
+
+.popup-btns button:active {
+    background-color: rgb(235, 217, 217);
+}
+
+/* Custom theme buttons */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    transition: .4s;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: #03989E;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #000000;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #000000;
+}
+
+input:checked+.slider:before {
+    transform: translateX(1.5em);
+}
+
+.slider::after {
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    top: 10%;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    background-color: rgb(0, 0, 0);
+    transition: ease 0.4s;
+}
+
+input:checked+.slider::after {
+    left: 80%;
+    width: 0px;
+    height: 0px;
+}
+
+/* OTHER BUTTONS */
+.row-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.button-items {
+    padding: 5px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+#changeBackground {
+    width: 200px;
+}
+
+/* CSS */
+/* Took the button code as well as styling for other elements on the page from this site https://getcssscan.com/css-buttons-examples */
+.button-50 {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 13px 30px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.button-50:focus {
+    text-decoration: none;
+}
+
+.button-50:hover {
+    text-decoration: none;
+}
+
+.button-50:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.button-50:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+.font-menu {
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 13px 30px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+select.font-menu {
+    width: 200px;
+}
+
+a {
+    color: black;
+}
