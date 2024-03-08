@@ -32,6 +32,29 @@ document.addEventListener("DOMContentLoaded", () => {
             shift.style.backgroundPositionX = `${actual_shift}%`;
         });
     }
+
+    document.getElementById("b1").addEventListener("click", () => {
+        show("q1");
+    });
+
+    document.getElementById("b2").addEventListener("click", () => {
+        show("q2");
+    });
+
+    document.getElementById("b3").addEventListener("click", () => {
+        show("q3");
+    });
+
+    document.getElementById("binfo").addEventListener("click", () => {
+        show("info");
+    });
+
+    function show(id) {
+        document.querySelectorAll('#modals div').forEach( (div) => {
+            div.classList.remove('show');
+        });
+        document.getElementById(id).classList.add('show');
+    }
 });
 
 // https://dev.to/clementgaudiniere/create-a-parallax-effect-when-the-mouse-moves-3km0

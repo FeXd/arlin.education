@@ -18,7 +18,6 @@ html {
 body {
     max-width: 1920px;
     max-height: 1080px;
-    background-color:red;
     overflow: hidden;
     position: relative;
 }
@@ -33,7 +32,7 @@ h1 {
     background-image: url('../images/sky.png');
     background-position-x: center;
     background-position-y: center;
-    background-size:auto;
+    background-size: auto;
     background-repeat: no-repeat;
 }
 
@@ -71,4 +70,84 @@ h1 {
     background-position-y: center;
     background-size: 200%;
     background-repeat: no-repeat;
+}
+
+#modals {
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#q1, #q2, #q3, #info {
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+    max-width: 50%;
+    border: 3px solid black;
+    transition: all 0.5s ease;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#q1.show, #q2.show, #q3.show, #info.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+#buttons {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    z-index: 1002;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#b1, #b2, #b3, #binfo {
+    cursor: pointer;
+    padding: 1em;
+    margin: 1em;
+    background-color: red;
+    border-radius: 10px;
+    width: 100px;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    border: 3px solid black;
+}
+
+#b1, #q1 {
+    background-color: white;
+    color: black;
+}
+
+#b2, #q2 {
+    background-color: red;
+    color: black;
+}
+
+#b3, #q3 {
+    background-color: yellow;
+    color: black;
+}
+
+#binfo, #info {
+    background-color: black;
+    color: white;
+    border: 3px white solid;
 }
