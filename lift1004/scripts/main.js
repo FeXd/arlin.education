@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mousemove", parallax);
+    document.addEventListener("touchmove", parallax);
     function parallax(event) {
+        // Determine whether the event is a touch event
+        const isTouchEvent = event.type.startsWith('touch');
+        // Get the relevant coordinates
+        let pageX = isTouchEvent ? event.touches[0].pageX : event.pageX;
+
         this.querySelectorAll(".parallax").forEach((shift) => {
             let currentPositionX = shift.style.backgroundPositionX.split("px")[0];
             if (!currentPositionX) {
@@ -8,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             currentPositionX = parseInt(currentPositionX);
 
-            let x = (event.pageX / window.innerWidth);
+            let x = (pageX / window.innerWidth);
             let max_shift = 20;
 
             switch (shift.id) {
@@ -50,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function show(id) {
-        document.querySelectorAll('#modals div').forEach( (div) => {
+        document.querySelectorAll('#modals div').forEach((div) => {
             div.classList.remove('show');
         });
         document.getElementById(id).classList.add('show');
