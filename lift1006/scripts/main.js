@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    document.querySelectorAll('section').forEach((sec) => {
+    document.querySelectorAll('section h2').forEach((sec) => {
         sec.addEventListener("click", () => {
-            sec.classList.toggle('hide');
+            sec.parentElement.classList.toggle('hide');
         })
     });
 
