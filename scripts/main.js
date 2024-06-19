@@ -51,22 +51,31 @@ document.addEventListener('DOMContentLoaded', function () {
         x += spacing / 2;
       }
 
-      const circle = Bodies.circle(x, y, radius, {isStatic: true});
+      const circle = Bodies.circle(x, y, radius, { isStatic: true, render: { fillStyle: '#f2f2f2' } });
 
       World.add(engine.world, circle);
     }
   }
 
-  // Create some objects
-  const box = Bodies.rectangle(container.offsetWidth / 2, -100, 20, 20, { isStatic: false, });
-  const circle = Bodies.circle(400, -100, 20, { isStatic: false });
-  const rectangle = Bodies.rectangle(200, -100, 100, 20, { isStatic: false });
-  const triangle = Bodies.polygon(600, -100, 3, 20, { isStatic: false });
-  const polygon = Bodies.polygon(400, -100, 5, 20, { isStatic: false });
-  const trapezoid = Bodies.trapezoid(600, -100, 120, 20, 0.5, { isStatic: false });
+  // Drop a ball at a random x location every second
+  setInterval(() => {
+    if (!document.hidden) { // only drop a ball if document is visible
+      const x = Math.random() * render.options.width;
+      const ball = Bodies.circle(x, 0, 15, { isStatic: false, restitution: 0.9 });
+      World.add(engine.world, ball);
+    }
+  }, 1000);
 
-  // Add all of the bodies to the world
-  World.add(engine.world, [box, circle, rectangle, triangle, polygon, trapezoid]);
+  // Remove bodies that fall below the screen every second
+  setInterval(() => {
+    const bodies = World.allBodies(engine.world);
+    for (let i = 0; i < bodies.length; i++) {
+        const body = bodies[i];
+        if (body.position.y > render.options.height) {
+            World.remove(engine.world, body);
+        }
+    }
+  }, 1000);
 
   // Create a runner
   const runner = Runner.create();
