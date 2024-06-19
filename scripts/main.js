@@ -34,13 +34,36 @@ document.addEventListener('DOMContentLoaded', function () {
   // Set id
   render.canvas.id = 'matter';
 
+  // Create a grid of small circles
+  const radius = 2;
+  const spacing = radius * 30; // Adjust the spacing as needed
+
+  const rows = Math.floor(container.offsetHeight / spacing) + 1;
+  const cols = Math.floor(container.offsetWidth / spacing) + 1;
+
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      let x = col * spacing;
+      let y = row * spacing;
+
+      // Stagger every other row
+      if (row % 2 === 1) {
+        x += spacing / 2;
+      }
+
+      const circle = Bodies.circle(x, y, radius, {isStatic: true});
+
+      World.add(engine.world, circle);
+    }
+  }
+
   // Create some objects
-  const box = Bodies.rectangle(container.offsetWidth/2, -100, 80, 80, {isStatic: false,});
-  const circle = Bodies.circle(400, -100, 50, { isStatic: false });
-  const rectangle = Bodies.rectangle(200, -100, 100, 50, { isStatic: false });
-  const triangle = Bodies.polygon(600, -100, 3, 50, { isStatic: false });
-  const polygon = Bodies.polygon(400, -100, 5, 60, { isStatic: false });
-  const trapezoid = Bodies.trapezoid(600, -100, 120, 60, 0.5, { isStatic: false });
+  const box = Bodies.rectangle(container.offsetWidth / 2, -100, 20, 20, { isStatic: false, });
+  const circle = Bodies.circle(400, -100, 20, { isStatic: false });
+  const rectangle = Bodies.rectangle(200, -100, 100, 20, { isStatic: false });
+  const triangle = Bodies.polygon(600, -100, 3, 20, { isStatic: false });
+  const polygon = Bodies.polygon(400, -100, 5, 20, { isStatic: false });
+  const trapezoid = Bodies.trapezoid(600, -100, 120, 20, 0.5, { isStatic: false });
 
   // Add all of the bodies to the world
   World.add(engine.world, [box, circle, rectangle, triangle, polygon, trapezoid]);
