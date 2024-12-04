@@ -1,0 +1,334 @@
+/* Stylesheet for A theme */
+/* Main stylesheet for this project */
+
+html {
+    min-width: 250px;
+    background-attachment: inherit;
+    background-image: url(../assets/a-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Changes our portfolio links colour */
+a {
+    color: #6b7476;
+}
+
+.item img {
+    width: 100vw;
+    height: 100vh;
+    position: static
+}
+
+#changeBackground {
+    width: 200px;
+}
+
+header {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Clicker Script', cursive;
+    font-size: 5rem;
+    letter-spacing: -1.5px;
+    margin: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.row-buttons {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.column-popUp {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    border-radius: 0.75rem;
+}
+
+/* Card styling */
+.popup-card {
+    border-radius: 1rem;
+    background-color: #ebf7f5;
+    opacity: 80%;
+    /* Rounds the bottoms of the popup buttons */
+    overflow: hidden;
+}
+
+.popup-info {
+    padding: 40px 40px 30px 40px;
+}
+
+
+/* Text/font styling */
+h3 {
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: "sirenia", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+p {
+    font-size: 1rem;
+    font-family: "ofelia-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h3,
+p {
+    text-align: center;
+}
+
+
+/* Button styling */
+.popup-btns button {
+    background-color: #ebf7f5;
+    font-size: 1rem;
+    font-family: "sirenia", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+    /* Removes the default border around the full button */
+    border: none;
+    border-top: 1px solid #d0dad8;
+    padding: 20px 16px;
+    cursor: pointer;
+    float: left;
+    width: 100%;
+}
+
+.popup-btns button:not(:last-child) {
+    border-left: none;
+}
+
+.popup-btns button:hover {
+    background-color: #e7f3f1;
+}
+
+.popup-btns button:active {
+    background-color: #DEEAE8;
+}
+
+/* Custom theme buttons */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0);
+    transition: .4s;
+    background-color: #ebf7f5;
+    border: 1px solid #d0dad8;
+    border-radius: 30px;
+    box-shadow: #fff 4px 4px 0 0, #d0dad8 4px 4px 0 1px;
+    box-sizing: border-box;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: #b2bebc;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #d0dad8;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #d0dad8;
+}
+
+input:checked+.slider:before {
+    transform: translateX(1.5em);
+}
+
+.slider::after {
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    top: 10%;
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    background-color: #ebf7f5;
+    transition: ease 0.4s;
+}
+
+input:checked+.slider::after {
+    left: 80%;
+    width: 0px;
+    height: 0px;
+}
+
+.row-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.button-items {
+    padding: 5px;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+#changeBackground {
+    width: 200px;
+}
+
+/* CSS */
+/* Took the button code as well as styling for other elements on the page from this site https://getcssscan.com/css-buttons-examples */
+/* Updated the styling to the button code referenced */
+.button-50 {
+    appearance: button;
+    background-color: #ebf7f5;
+    background-image: none;
+    border: 1px solid #d0dad8;
+    border-radius: 30px;
+    box-shadow: #fff 4px 4px 0 0, #d0dad8 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #212427;
+    font-size: .85rem;
+    font-family: "ofelia-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 13px 30px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.button-50:focus {
+    text-decoration: none;
+}
+
+.button-50:hover {
+    text-decoration: none;
+}
+
+.button-50:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.button-50:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #212427 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+/* Styles the drop down menu button */
+.font-menu {
+    background-color: #ebf7f5;
+    background-image: none;
+    border: 1px solid #d0dad8;
+    border-radius: 30px;
+    box-shadow: #fff 4px 4px 0 0, #d0dad8 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #212427;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 13px 30px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* Styles the font for the drop down menu */
+select.font-menu {
+    width: 200px;
+    font-size: .85rem;
+    font-family: "ofelia-display", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" id="background">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>Affirmations</title>
+    <script src="scripts/script.js"></script>
+    <link id="pageStyle" rel="stylesheet" href="styles/a.css">
+    <!-- Typekit stylesheet is for my custom font on light theme -->
+    <link rel="stylesheet" href="https://use.typekit.net/jni8zvq.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Manrope&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/rfl6ikl.css">
+</head>
+
+
+<body>
+    <div id="loader" class="center"></div>
+    <div class="container">
+        <header>
+            <h1 id="title">Affirmations</h1>
+
+        </header>
+
+        <div class="row">
+            <!-- Row that holds affirmation card -->
+            <div class="column">
+                <!-- WANT CONTENT IN SINGLE COLUMN -->
+                <div class="popup-card">
+                    <div class="popup-info">
+                        <h3>Today's Affirmation</h3>
+                        <p id="quoteArea">
+                        </p>
+                    </div>
+                    <div class="popup-btns">
+                        <button onclick="updateQuote()">Get Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- NEW ROW -->
+        <div class="row-buttons">
+            <!-- Row that holds buttons -->
+            <div class="button-items">
+                <div class="toggle-btn">
+                    <label class="switch">
+                        <input onclick="swapStyleSheet()" id="swapStyle" type="checkbox" name="swapStyle">
+                        <span class="slider" onclick="swapStyleSheet()"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="button-items">
+                <p>
+
+                    <select class="font-menu" name="font_menu">
+                        <option value="select" onclick="defaultFont()">- Select Title Font -</option>
+                        <option class="font1" value="Font1" onclick="fontChange1()">Blenny</option>
+                        <option value="Font2" onclick="fontChange2()">Broadacre</option>
+                        <option value="Font3" onclick="fontChange3()">Juniper</option>
+                    </select>
+                </p>
+            </div>
+            <div class="button-items">
+                <button class="button-50" id="changeBackground" onclick="renderItem()">Change
+                    Background</button>
+            </div>
+        </div>
+        <!-- NEW ROW -->
+        <footer>
+            <div class="row">
+                <!-- row that holds footer info -->
+                <p>Quotes from:
+                    <a href="http://paperquotes.com" title="Powered by quotes from paperquotes.com">paperquotes.com</a>
+                    <img src="http://api.paperquotes.com/static/images/paperquotes.png" height="20" width="20"
+                        alt="paperquotes.com">
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
