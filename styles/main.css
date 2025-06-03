@@ -78,6 +78,11 @@ main.buttons div.button-shake {
     animation: 3s linear 0s infinite normal none running shake;
 }
 
+main.buttons div.highlight {
+    background-color: rgb(85, 26, 139);
+    color: white;
+}
+
 @keyframes shake {
     0% {
         transform: translateX(3px) rotate(1deg);
