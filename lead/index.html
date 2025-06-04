@@ -5,6 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emerging Leaders</title>
+    <!-- Fancybox - hacky lazy load to add image lightbox -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Step 1: Wrap <img> elements
+            document.querySelectorAll('img').forEach((img, i) => {
+                const wrapper = document.createElement('a');
+                wrapper.href = img.src;
+                wrapper.dataset.fancybox = 'gallery';
+                wrapper.dataset.caption = img.alt || '';
+
+                img.parentNode.insertBefore(wrapper, img);
+                wrapper.appendChild(img);
+            });
+
+            // Step 2: Load Fancybox CSS
+            const fancyCSS = document.createElement('link');
+            fancyCSS.rel = 'stylesheet';
+            fancyCSS.href = 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css';
+            document.head.appendChild(fancyCSS);
+
+            // Step 3: Load Fancybox JS
+            const fancyJS = document.createElement('script');
+            fancyJS.src = 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js';
+            fancyJS.onload = () => {
+                // Step 4: Manually initialize Fancybox
+                Fancybox.bind("[data-fancybox='gallery']", {
+                    // Optional config goes here
+                });
+            };
+            document.body.appendChild(fancyJS);
+        });
+    </script>
     <style>
         img {
             width: 100%;
