@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerging Leaders</title>
+    <!-- Fancybox - hacky lazy load to add image lightbox -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Step 1: Wrap <img> elements
+            document.querySelectorAll('img').forEach((img, i) => {
+                const wrapper = document.createElement('a');
+                wrapper.href = img.src;
+                wrapper.dataset.fancybox = 'gallery';
+                wrapper.dataset.caption = img.alt || '';
+
+                img.parentNode.insertBefore(wrapper, img);
+                wrapper.appendChild(img);
+            });
+
+            // Step 2: Load Fancybox CSS
+            const fancyCSS = document.createElement('link');
+            fancyCSS.rel = 'stylesheet';
+            fancyCSS.href = 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css';
+            document.head.appendChild(fancyCSS);
+
+            // Step 3: Load Fancybox JS
+            const fancyJS = document.createElement('script');
+            fancyJS.src = 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js';
+            fancyJS.onload = () => {
+                // Step 4: Manually initialize Fancybox
+                Fancybox.bind("[data-fancybox='gallery']", {
+                    // Optional config goes here
+                });
+            };
+            document.body.appendChild(fancyJS);
+        });
+    </script>
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="media/2025-06-EM-Presentation-Arlin.pdf">Download PDF Version</a>
+        </li>
+    </ul>
+    <img src="media/Slide1.PNG" />
+    <ul>
+        <li>not the starting slide - just use to KILL TIME during setup</li>
+    </ul>
+    <img src="media/Slide2.PNG" />
+    <ul>
+        <li>Coconut - founded in 2007 - 120 people - customer engagement platform serving financial institutions</li>
+        <li>Rock & Bloom - founded in 2012 - 21 people - brand studio specializing in brand strategy, identity, and
+            digital experiences</li>
+    </ul>
+    <img src="media/Slide3.PNG" />
+    <ul>
+        <li>WHY I CHOSE THEM
+            <ul>
+                <li>worked with both</li>
+                <li>had a LASTING IMPACT and have continued to succeed</li>
+                <li>Katherine for HUSTLE and STRATEGIC THINKING</li>
+                <li>Heather for her EMPATHY and AUTHORITY with clients (BEST PM EVER)</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="media/Slide4.PNG" />
+    <ul>
+        <li>DO NOT SPEND TIME ON THIS</li>
+        <li>go over concepts in bold</li>
+    </ul>
+    <img src="media/Slide5.PNG" />
+    <ul>
+        <li>“how has your view on leadership CHANGED since you started your company”
+        <li>Katherine
+            <ul>
+                <li>startup you are a DOER (quarterback)</li>
+                <li>grow company and become COACH (need to HIRE doers)</li>
+                <li>“it's hard because it's DIFFERENT”</li>
+                <li>“it's ok to NOT be the quarterback”</li>
+            </ul>
+        </li>
+        <li>Heather
+            <ul>
+                <li>SELF AWARENESS grown over time</li>
+                <li>leadership style - small team doesn't work big team</li>
+                <li>how do you build someone up?</li>
+                <li>give employees SPACE to take risks and FAIL</li>
+            </ul>
+        </li>
+        </li>
+    </ul>
+    <img src="media/Slide6.PNG" />
+    <ul>
+        <li>“How do you build trust and create psychological safety on your team”</li>
+        <li>BOTH
+            <ul>
+                <li>important to ALIGN our VALUES (which builds TRUST)</li>
+                <li>1 on 1s, daily standups BOTH remind about values</li>
+            </ul>
+        </li>
+        <li>Katherine
+            <ul>
+                <li>can't have SAFETY without TRUST</li>
+                <li>HEALTHY FRICTION is a good thing</li>
+            </ul>
+        </li>
+        <li>Heather
+            <ul>
+                <li>CONNECTING as HUMANS not just on the WORK / TASK</li>
+                <li>personally abides by “radical candor”</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="media/Slide7.PNG" />
+    <ul>
+        <li>Katherine
+            <ul>
+                <li>set clear expectations</li>
+                <li>“I love you, but I need to see XYZ”</li>
+            </ul>
+        </li>
+        <li>Heather
+            <ul>
+                <li>do not wait, have the conversation</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="media/Slide8.PNG" />
+    <ul>
+        <li>Katherine
+            <ul>
+                <li>“I didn't realize the importance or the alignment it would create in a company”</li>
+                <li>big COST for not having aligned VALUES - people!</li>
+            </ul>
+        </li>
+        <li>Heather
+            <ul>
+                <li>need to INTEGRATE values can't just be WORDS and FLUFF</li>
+                <li>every day standup - 'has someone “rocked” our values?'</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="media/Slide9.PNG" />
+    <ul>
+        <li>BOTH
+            <ul>
+                <li>framed leadership as shared, evolving, and human, not fixed or top-down</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="media/Slide10.PNG" />
+    <ul>
+        <li>Katherine
+            <ul>
+                <li>
+                    <a href="https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team">
+                        The Five Dysfunctions of a Team
+                    </a>
+                </li>
+                <li>“my go to [book], I make everybody read it”</li>
+            </ul>
+        </li>
+        <li>Heather
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/The_Leadership_Challenge">The Leadership Challenge</a></li>
+                <li>“recommend all the time”</li>
+                <li>leadership styles look different</li>
+            </ul>
+        </li>
+    </ul>
+    <img src="media/Slide11.PNG" />
+    <ul>
+        <li>thank Diane, School, Faculty for the opportunity
+        </li>
+    </ul>
+    <img src="media/Slide12.PNG" />
+    <ul>
+        <li><a href="https://linkedin.com/in/heatheradamssk">Heather Adams | LinkedIn</a></li>
+        <li><a href="https://rockandbloom.com">Rock &amp; Blom</a></li>
+        <li><a href="https://linkedin.com/in/katherineregnier">Katherine Regnier | LinkedIn</a></li>
+        <li><a href="https://coconutsoftware.com">Coconut Software</a></li>
+        <li><a href="https://zu.com">zu | Digital Product Agency</a></li>
+        <li><a href="https://linkedin.com/in/arlin">Arlin Schaffel | LinkedIn</a></li>
+        <li><a href="https://arlin.education">Arlin's Education Website</a></li>
+    </ul>
+    <img src="media/Slide13.PNG" />
+    <ul>
+        <li>
+            <a href="https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team">
+                The Five Dysfunctions of a Team
+            </a>
+        </li>
+        <li><a href="https://en.wikipedia.org/wiki/The_Leadership_Challenge">The Leadership Challenge</a></li>
+        <li><a href="https://coconutsoftware.com/about">Coconut Software Values</a></li>
+        <li><a href="https://rockandbloom.com/living-our-core-values-aspire">Rock &amp; Bloom Core Values</a></li>
+        <li>
+            <a href="https://saskpolytech.ca/about/about-us/vision-mission-mandate.aspx">
+                Sask Polytech Vision Mission Mandate
+            </a>
+        </li>
+    </ul>
+</body>
+
+</html>
