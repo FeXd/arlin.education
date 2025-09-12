@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Mouse = Matter.Mouse,
     MouseConstraint = Matter.MouseConstraint,
     Runner = Matter.Runner;
+    Composite = Matter.Composite;
 
   // Create an engine
   const engine = Engine.create();
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Remove bodies that fall below the screen every second
   setInterval(() => {
-    const bodies = World.allBodies(engine.world);
+    const bodies = Composite.allBodies(engine.world);
     for (let i = 0; i < bodies.length; i++) {
         const body = bodies[i];
         if (body.position.y > render.options.height) {
