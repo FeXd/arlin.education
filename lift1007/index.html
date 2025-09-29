@@ -10,7 +10,8 @@
 
 <body>
     <aside id="introduction">
-        <h1>LIFT-1007: Learning Technologies</h1>
+        <h1>Read the Assignment Description</h1>
+        <h2>LIFT-1007: Learning Technologies</h2>
         <p>In this module we will explore integrating learning technology tools into classroom activities for pedagogical purposes. This module does not focus on specific tools, instead it is about the larger conversation of using technology effectively, efficiently, and with purpose.</p>
         <h2>Final Assessment: Educational Technology Review</h2>
         <p>Select an educational technology software, then produce a description and analysis.</p>
@@ -94,6 +95,14 @@
             <p>Assignment by Arlin Schaffel in September 2025</p>
         </footer>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $("aside#introduction h1").on("click", function() {
+            $(this).nextAll().slideToggle();
+            $(this).toggleClass("open");
+        });
+    </script>
 </body>
 
 </html>
