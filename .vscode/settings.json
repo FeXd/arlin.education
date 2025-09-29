@@ -1,0 +1,6 @@
+{
+  "[html]": {
+    "editor.wordWrap": "off"
+  },
+  "html.format.wrapLineLength": 0
+}
