@@ -31,7 +31,7 @@ body {
 }
 
 body aside h1::before {
-    content: "❯"; 
+    content: "❯ "; 
     display: inline-block;
     margin-right: 0.25em;
 }
