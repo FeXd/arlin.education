@@ -6,7 +6,11 @@ a, a:visited {
     color: #c3da63;
 }
 
-h1, h2, h3, h4, h5, h6 {
+footer a, footer a:visited {
+    color: #008371;
+}
+
+h1, h2, h3, h4, h5, h6, footer {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -86,6 +90,12 @@ main header p {
     order: 3;
 }
 
-main footer p {
-    margin-bottom: 0;
+main section { 
+  border-top: 4px solid #c3da63;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+
+footer p {
+    padding: 1em;
 }
