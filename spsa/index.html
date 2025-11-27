@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPSA Saskatoon Events</title>
+</head>
+
+<body>
+    <header>
+        <h1>SPSA Saskatoon Events</h1>
+        <p>
+            The events below come from the 
+            <a href="https://spsa.ca/events/" target="blank">SPSA Event's page</a>
+            under the Saskatoon Events accordion.
+            But it takes several clicks to get there. Luckily their site runs on 
+            <a href="https://wordpress.org/" target="_blank">WordPress</a>,
+            which means it has a built in 
+            <a href="https://developer.wordpress.org/rest-api/" target="_blank">REST API</a> 
+            through <code>/wp-json/</code> endpoint.
+            We can get their posts from <code>/wp-json/wp/v2/posts/</code> and 
+            filter them using <code>?categories=15</code> 
+            which returns only "Saskatoon Events".
+        </p>
+    </header>
+
+    <main>
+        <h2>Events</h2>
+        Events should live here.
+    </main>
+
+    <section id="page-details">
+        <h2>About This Page:</h2>
+        <p>
+            This page was created with basic <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>, <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a>, and <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>.
+            The code is publicly available on <a href="https://github.com/FeXd/arlin.education" target="_blank">GitHub</a>.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Arlin Schaffel. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
