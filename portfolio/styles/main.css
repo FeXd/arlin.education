@@ -140,11 +140,54 @@ main {
 
 main section {
     clear: both;
-    padding: 0 1em;
+    overflow: auto;
+    padding: 1em;
+}
+
+main section > p:first-of-type {
+    margin-top: 0;
 }
 
 main h1 {
+    /* taking out for now, may put back later */
     display: none;
+    /* margin: 0 0 0.5em 0; */
+}
+
+/* COMPETENCY PAGES - DESCRIPTION */
+
+main .competency-description-section {
+    background-color: white;
+}
+
+main .competency-description-section img:first-of-type {
+    float: left;
+    max-width: 200px;
+    margin-right: 0.5em;
+    background-color:black;
+    border-radius: 10px;
+}
+
+/* small sreen - big image */
+@media (max-width: 500px) {
+    main .competency-description-section img:first-of-type {
+        max-width: 100%;
+        display: block;
+    }
+}
+
+/* COMPETENCY PAGES - ARTIFACT */
+
+main .artifact-section:nth-of-type(odd) {
+    background-color: white;
+}
+
+main .artifact-section:nth-of-type(even) {
+    background-color: #efefef;
+}
+
+main .artifact-section h2 {
+    margin-top: 0;
 }
 
 /* ABOUT SECTION */
@@ -195,8 +238,6 @@ main #about-section img:nth-of-type(even) {
 
 main #instructor-competencies-section {
     background-color: white;
-    padding-top: 1em;
-    padding-bottom: 1em;
 }
 
 main #instructor-competencies-section h2 {
