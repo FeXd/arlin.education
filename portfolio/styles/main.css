@@ -8,7 +8,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: purple;
+    background-color: #732181;
 }
 
 body {
@@ -17,10 +17,13 @@ body {
     font-size: 200%;
     background-color: #efefef;
     max-width: 1920px;
+    box-shadow:
+    -2rem 0 2rem -1rem rgba(0,0,0,0.15),
+    2rem 0 2rem -1rem rgba(0,0,0,0.15);
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -151,7 +154,7 @@ main #about-section {
 }
 
 main #about-section img {
-    max-width: 300px;
+    max-width: 512px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     background-color: white;
@@ -162,13 +165,30 @@ main #about-section img {
 }
 
 main #about-section img:nth-of-type(odd) {
-    float: right;
+    float: left;
     transform: rotate(2deg);
 }
 
 main #about-section img:nth-of-type(even) {
-    float: left;
+    float: right;
     transform: rotate(-2deg);
+}
+
+/* medium sreen - smaller images */
+@media (max-width: 1000px) {
+    main #about-section img {
+        max-width: 50%;
+    }
+}
+
+/* small screen - full width image */
+@media (max-width: 800px) {
+    main #about-section img {
+        max-width: 100%;
+        display: block;
+        margin: 0 0 1em 0;
+        transform: rotate(0deg) !important;
+    }
 }
 
 /* INSTRUCTOR COMPETENCIES */
@@ -176,7 +196,7 @@ main #about-section img:nth-of-type(even) {
 main #instructor-competencies-section {
     background-color: white;
     padding-top: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 }
 
 main #instructor-competencies-section h2 {
@@ -185,26 +205,32 @@ main #instructor-competencies-section h2 {
 
 main #instructor-competencies-section img {
     max-width: 400px;
+    margin-bottom: 1em;
     float: right;
+}
+
+/* medium and smaller - make image wide */
+@media (max-width: 850px) {
+    main #instructor-competencies-section img {
+        max-width: 100%;
+        display: block;
+    }
 }
 
 main #instructor-competencies-section p:last-of-type {
     margin-bottom: 0;
 }
 
-/* ARTIFACTS & REFLECTIONS */
-
-main #artifacts-reflections-section {
-    background-color: white;
-    padding-bottom: 2em;
+main #instructor-competencies-section nav {
+    margin: 1em;
 }
 
-main #artifacts-reflections-section h2, 
-main #artifacts-reflections-section nav ul li p {
+main #instructor-competencies-section nav ul li p {
     display:none;
 }
 
-main #artifacts-reflections-section nav ul {
+main #instructor-competencies-section nav ul {
+    clear: both;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -216,7 +242,7 @@ main #artifacts-reflections-section nav ul {
 
 /* wrap competencies if too small */
 @media (max-width: 1000px) {
-    main #artifacts-reflections-section nav ul {
+    main #instructor-competencies-section nav ul {
         flex-wrap: wrap;
     }
 }
@@ -226,7 +252,7 @@ main #artifacts-reflections-section nav ul {
 footer {
     display: grid;
     grid-template-columns: auto max-content max-content;
-    gap: 2em;
+    column-gap: 2em;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -234,12 +260,18 @@ footer {
     padding-left: 1em;
 }
 
+@media (max-width: 1400px) {
+    footer {
+        grid-template-columns: auto;
+    }
+}
+
 footer > a {
     font-size: 2em;
-
     font-weight: bold;
     text-decoration: none;
     color: white;
+    margin-bottom: 0.5em;
 }
 
 footer > a span {
