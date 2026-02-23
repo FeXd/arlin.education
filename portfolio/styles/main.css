@@ -60,7 +60,7 @@ header {
 }
 
 header > a {
-    font-size: 3em;
+    font-size: clamp(1.5em, 13vw, 3em);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -131,7 +131,7 @@ header aside {
 }
 
 /* hide business card when small screen */
-@media (max-width: 1000px) {
+@media (max-width: 1230px) {
     header aside {
         display: none;
     }
@@ -193,6 +193,26 @@ main .artifact-section:nth-of-type(even) {
 
 main .artifact-section h2 {
     margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+main .artifact-section img:first-of-type {
+    max-width: 500px;
+}
+
+main .artifact-section figure {
+    float: left;
+    max-width: 500px;
+    background-color: #732181;
+    color: white;
+    border-radius: 10px;
+    margin: 0 0.5em 0.5em 0;
+    padding: 0.5em;
+}
+
+main .artifact-section figcaption {
+    text-align: center;
+    font-size: 0.8em;
 }
 
 /* ABOUT SECTION */
@@ -312,7 +332,7 @@ footer {
 }
 
 footer > a {
-    font-size: 2em;
+    font-size: clamp(1em, 10vw, 2em);
     font-weight: bold;
     text-decoration: none;
     color: white;
