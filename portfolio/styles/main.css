@@ -222,6 +222,7 @@ main .artifact-section figure {
 
 main > :nth-child(2 of .artifact-section) figure {
     float: right;
+    margin: 0 0 0.5em 0.5em;
 }
 
 main .artifact-section figcaption {
