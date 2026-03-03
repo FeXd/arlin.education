@@ -22,6 +22,16 @@ body {
     2rem 0 2rem -1rem rgba(0,0,0,0.15);
 }
 
+main a,
+main a:visited {
+    text-decoration: none;
+    color: #732181;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
 img {
     width: 100%;
 }
