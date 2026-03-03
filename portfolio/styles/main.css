@@ -220,9 +220,13 @@ main .artifact-section figure {
     padding: 0.5em;
 }
 
+main > :nth-child(2 of .artifact-section) figure {
+    float: right;
+}
+
 main .artifact-section figcaption {
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 
 /* ABOUT SECTION */
