@@ -155,7 +155,7 @@ main {
 
 main section {
     clear: both;
-    overflow: auto;
+    display: flow-root;
     padding: 0.5em;
 }
 
@@ -228,6 +228,22 @@ main > :nth-child(2 of .artifact-section) figure {
 main .artifact-section figcaption {
     text-align: center;
     font-size: 0.6em;
+}
+
+@media (max-width: 1020px) {
+    main .artifact-section figure {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 800px) {
+    main .artifact-section figure {
+        max-width: 500px;
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
+        margin: 0 0 0.5em 0 !important;
+    }
 }
 
 /* ABOUT SECTION */
